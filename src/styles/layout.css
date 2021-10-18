@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'thumbnl-circular';
+    src: local('thumbnl-circular'), local('thumbnl-circular'),
+        url('./font/newake.otf') format('opentype');
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #FBF5F0;
+}
