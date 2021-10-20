@@ -27,19 +27,37 @@ const NavbarContainer = styled.div`
 
 const NavLogo = styled(Link)`
     color: #4F1824;
-    z-index: 2;
     justify-self: flex-start;
     cursor: pointer;
+    z-index: 2;
     padding-top: 5px;
     font-family: 'thumbnl-circular';
     font-size: 2.8rem;
     display: flex;
     align-items: center;
     text-decoration: none;
+    background: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
 
     @media screen and (max-width: 868px){
+        font-size: 2.5rem;
+    }
+    @media screen and (max-width: 414px){
         font-size: 1.9rem;
     }
+
+    @keyframes slidebg {
+    to {
+        background-position:20vw;
+        }
+    }
+
+    &:hover{
+        animation: slidebg 5s linear infinite;
+        color: transparent;
+    }
+
 `
 
 const Navbar = () => {

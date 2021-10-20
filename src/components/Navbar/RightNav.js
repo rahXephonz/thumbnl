@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
+import { ButtonNav } from '../../styles/globalStyles'
 
 
 const NavMenu = styled.ul`
@@ -11,7 +12,7 @@ const NavMenu = styled.ul`
     @media screen and (max-width: 868px){
         flex-flow: column nowrap;
         align-items: flex-start;
-        background-color: #FDA6B4;
+        background-color: wheat;
         position: fixed;
         transform: ${({ Open }) => Open ? 'translateX(0)' : 'translateX(100%)'};
         top: 0;
@@ -22,6 +23,7 @@ const NavMenu = styled.ul`
         z-index: 1;
         transition: transform 0.3s ease-in-out;
     }
+
 `
 
 const NavItem = styled.li`
@@ -65,7 +67,11 @@ const RightNav = ({ Open }) => {
             <NavItem>
                 <NavLinks to='/lookup'>Log—in</NavLinks>
             </NavItem>
+            <Link to='/lookup'>
+                <ButtonNav primary>Try it now</ButtonNav>
+            </Link>
         </NavMenu>
+
     </>
     )
 }
